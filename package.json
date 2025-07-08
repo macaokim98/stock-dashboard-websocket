@@ -6,8 +6,9 @@
   "scripts": {
     "start": "node dist/server.js",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "tsc",
-    "test": "jest"
+    "build": "rm -rf dist && tsc",
+    "test": "jest",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "socket.io": "^4.7.5",
